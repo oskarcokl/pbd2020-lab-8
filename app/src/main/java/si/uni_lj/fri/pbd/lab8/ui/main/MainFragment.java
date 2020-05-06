@@ -42,7 +42,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider.AndroidViewModelFactory(getActivity().getApplication()).create(MainViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         productId = getView().findViewById(R.id.productID);
         productName = getView().findViewById(R.id.productName);
         productQuantity = getView().findViewById(R.id.productQuantity);
